@@ -1,0 +1,120 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  input,
+  select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  select {
+    resize: vertical;
+    min-height: 100px;
+    overflow: auto;
+  }
+  
+  button[type="submit"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  button[type="submit"]:focus {
+    outline: none;
+  }
+  
+  .toggleContributorsButton {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .toggleContributorsButton:hover {
+    transform: scale(1.1);
+  }
+  
+  .contributorsContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .toggleContributorsButton {
+    align-self: flex-start;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .toggleContributorsButton:hover {
+    transform: scale(1.1);
+  }
+  
+  .contributorsList {
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: 0.5rem;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    max-height: 150px; /* Adjust this value to control the list's visible height */
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1;
+  }
+  
+.contributorsList select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  
+
+  .scrollableList {
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5rem;
+  }
+  
+  .contributorItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.25rem;
+  }
+  
+  .contributorItem:hover {
+    background-color: #f0f0f0;
+  }
+  

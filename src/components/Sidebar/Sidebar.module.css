@@ -1,0 +1,125 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 18%;
+  background-color: #333;
+  color: #fff;
+}
+
+.user_profile {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar_header {
+  background-color: #444;
+  color: #fff;
+  padding: 20px;
+  height: 100px;
+  margin: 10px;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  border-radius: 10px;
+}
+
+.user_profile img {
+width: 70px;
+height: 70px;
+border-radius: 50%;
+margin-right: 20px;
+}
+
+.user_info {
+display: flex;
+flex-direction: column;
+}
+
+.user_info h4 {
+margin: 0;
+font-size: 18px;
+font-weight: bold;
+}
+
+.user_info p {
+margin: 0;
+font-size: 14px;
+font-weight: lighter;
+}
+
+.sidebar h3 {
+margin-top: 0;
+padding: 20px;
+text-align: center;
+}
+
+.sidebar ul {
+list-style: none;
+margin: 0;
+padding: 0 10px;
+display: flex;
+flex-direction: column;
+}
+
+.sidebar ul li {
+margin-bottom: 20px;
+padding: 7px 15px;
+border-radius: 10px;
+transition: background-color 0.3s ease-in-out;
+display: flex;
+align-items: center;
+}
+
+.sidebar ul li:hover {
+background-color: #666;
+}
+
+.sidebar ul li a {
+color: #fff;
+text-decoration: none;
+font-size: 15px;
+font-weight: bold;
+}
+
+.sidebar ul li .icon {
+margin-right: 10px;
+}
+
+.sidebar ul li .icon svg {
+font-size: 24px;
+}
+
+.sidebar ul li a:hover {
+color: #fff;
+text-decoration: none;
+}
+
+.sidebar ul li a {
+display: flex;
+align-items: center;
+}
+
+.sidebar_footer {
+font-size: 22px;
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+text-align: center;
+padding: 10px 0;
+background-color: #222;
+}
+
+.sidebar_footer img {
+height: 45px;
+}
+
+.sidebar_footer span {
+color: rgb(150, 136, 60);
+}
+
+.current_page_li {
+  background-color: #666;
+}

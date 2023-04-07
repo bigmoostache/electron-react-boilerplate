@@ -1,6 +1,7 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import icon from '../../assets/icon.svg';
 import './App.css';
+import FileUploader from '../components/FileUploader/FileUploader';
 
 function Hello() {
   return (
@@ -16,10 +17,12 @@ function Hello() {
           rel="noreferrer"
         >
           <button type="button">
+          <FileUploader />
+
             <span role="img" aria-label="books">
               📚
             </span>
-            Read our docs
+            Read our docss
           </button>
         </a>
         <a

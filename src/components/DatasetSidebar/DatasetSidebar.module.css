@@ -1,0 +1,70 @@
+.sidebar_datasets {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 12%;
+  background-color: #b7d6ff;
+  overflow-y: auto;
+  padding: 1%;
+  transition: width 0.2s ease-out;
+  }
+  .sidebar_datasets:hover{
+    width: 13%;
+  }
+  
+  .sidebar_datasets h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-left:10px;
+  text-align: left;
+  }
+  
+  .sidebar_datasets ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+  
+  .sidebar_datasets li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  background-color: #b7d6ff;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  }
+  
+  .sidebar_datasets li:hover {
+  background-color: #9ac0ff;
+  }
+  
+  .sidebar_datasets li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  }
+  
+  .sidebar_datasets li .icon {
+  margin-right: 10px;
+  }
+  
+  .sidebar_datasets li .icon svg {
+  font-size: 24px;
+  color: #333;
+  }
+  
+  .sidebar_datasets li a:hover {
+  color: #000;
+  text-decoration: none;
+  }
+
+  
+.sidebar_datasets li.selected {
+  background-color: #86b4ff;
+}

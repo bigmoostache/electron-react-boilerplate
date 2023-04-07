@@ -14,6 +14,8 @@ import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
 import { resolveHtmlPath } from './util';
+import { spawn } from 'child_process';
+
 
 class AppUpdater {
   constructor() {
@@ -115,6 +117,28 @@ const createWindow = async () => {
 /**
  * Add event listeners...
  */
+app.on('ready', () => {
+  // Start the FastAPI server when the Electron app is ready
+  const pythonPath = path.join(__dirname, '..', '..', 'src_python', 'venv', 'Scripts', 'python.exe');
+  const fastApiScriptPath = path.join(__dirname, '..', '..', 'src_python', 'main.py');
+  const fastApiProcess = spawn(pythonPath, ['-m', 'uvicorn', 'main:app', '--host', '0.0.0.0', '--port', '4321', '--reload'], { cwd: path.dirname(fastApiScriptPath) });
+
+  console.log('Hello there')
+
+  fastApiProcess.stdout.on('data', (data) => {
+    console.log(`FastAPI stdout: ${data}`);
+  });
+
+  fastApiProcess.stderr.on('data', (data) => {
+    console.error(`FastAPI stderr: ${data}`);
+  });
+
+  fastApiProcess.on('close', (code) => {
+    console.log(`FastAPI process exited with code ${code}`);
+  });
+
+  // ... existing code ...
+});
 
 app.on('window-all-closed', () => {
   // Respect the OSX convention of having the application in memory even
@@ -122,6 +146,8 @@ app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
   }
+  fastApiProcess.kill(); // Kill the FastAPI process when all windows are closed
+
 });
 
 app

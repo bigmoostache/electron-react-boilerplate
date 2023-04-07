@@ -1,0 +1,5 @@
+.\venv\Scripts\activate.bat
+
+You can now make API calls from your Electron app to the FastAPI server running on http://localhost:8000.
+
+To run the application in development mode, open two terminal windows. In the first one, run npm run start:fastapi, and in the second one, run npm run start. To run the application in production mode, first, build the application using npm run build, then run npm run start:fastapi:prod in one terminal and run the packaged Electron app in another terminal.

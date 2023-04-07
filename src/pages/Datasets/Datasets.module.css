@@ -1,0 +1,25 @@
+/* OneDataset.module.css */
+
+.content {
+  position: fixed;
+  width: 82%;
+  height: 100%;
+  margin-right: 0;
+  margin-left: 18%;
+  background-color: rgb(231, 231, 231);
+}
+
+.content_in {
+  position: absolute;
+  top: 0;
+  left: 14%;
+  bottom: 0;
+  width: 84%;
+  height: 99%;
+  padding: 0%;
+  margin: 1%;
+  overflow-y: auto;
+}
+
+
+
